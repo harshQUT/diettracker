@@ -1,9 +1,17 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
-import Tasks from './pages/Tasks';
+import Dashboard from './pages/Dashboard';
+import MealLog from './pages/MealLog';
+import Goal from './pages/Goal';
+import Progress from './pages/Progress';
+
+function PrivateRoute({ children }) {
+  const token = localStorage.getItem('token');
+  return token ? children : <Navigate to="/login" />;
+}
 
 function App() {
   return (
@@ -12,8 +20,12 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+        <Route path="/meallog" element={<PrivateRoute><MealLog /></PrivateRoute>} />
+        <Route path="/goal" element={<PrivateRoute><Goal /></PrivateRoute>} />
+        <Route path="/progress" element={<PrivateRoute><Progress /></PrivateRoute>} />
+        <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
       </Routes>
     </Router>
   );
