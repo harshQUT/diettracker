@@ -10,8 +10,8 @@ function MealLog() {
 
   useEffect(() => {
     fetchMeals();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
   const fetchMeals = async () => {
     try {
       const res = await axiosInstance.get('/api/meals', {
