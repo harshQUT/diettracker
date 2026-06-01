@@ -3,7 +3,8 @@ import { useAuth } from '../context/AuthContext';
 import axiosInstance from '../axiosConfig';
 
 const Profile = () => {
-  const { user } = useAuth(); // Access user token from context
+  const { user } = useAuth();
+const token = localStorage.getItem('token');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,7 +19,7 @@ const Profile = () => {
       setLoading(true);
       try {
         const response = await axiosInstance.get('/api/auth/profile', {
-          headers: { Authorization: `Bearer ${user.token}` },
+          headers: { Authorization: `Bearer ${token}` },
         });
         setFormData({
           name: response.data.name,
@@ -41,7 +42,7 @@ const Profile = () => {
     setLoading(true);
     try {
       await axiosInstance.put('/api/auth/profile', formData, {
-        headers: { Authorization: `Bearer ${user.token}` },
+        headers: { Authorization: `Bearer ${token}` },
       });
       alert('Profile updated successfully!');
     } catch (error) {

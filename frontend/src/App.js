@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Admin from './pages/Admin';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
@@ -26,6 +27,7 @@ function App() {
         <Route path="/progress" element={<PrivateRoute><Progress /></PrivateRoute>} />
         <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         <Route path="/" element={<Navigate to="/dashboard" />} />
+<Route path="/admin" element={<PrivateRoute><Admin /></PrivateRoute>} />
       </Routes>
     </Router>
   );

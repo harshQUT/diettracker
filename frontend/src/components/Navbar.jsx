@@ -19,6 +19,7 @@ function Navbar() {
           <Link to="/meallog" className="hover:text-green-200">Meal Log</Link>
           <Link to="/progress" className="hover:text-green-200">Progress</Link>
           <Link to="/goal" className="hover:text-green-200">Set Goal</Link>
+	<Link to="/admin" className="hover:text-green-200">Admin</Link>
           <Link to="/profile" className="hover:text-green-200">Profile</Link>
           <button onClick={handleLogout} className="hover:text-green-200">Logout</button>
         </div>

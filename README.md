@@ -32,4 +32,4 @@ http://3.27.187.226:3000
 6. Run frontend: `npm start`
 
 ## JIRA Board
-https://harshqut.atlassian.net/jira/software/projects/your-project/boards
+https://diettracker.atlassian.net/jira/software/projects/SCRUM/boards/1
