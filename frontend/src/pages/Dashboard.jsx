@@ -12,11 +12,15 @@ function Dashboard() {
         const mealRes = await axiosInstance.get('/api/meals', {
           headers: { Authorization: `Bearer ${token}` }
         });
-        const goalRes = await axiosInstance.get('/api/goals', {
-          headers: { Authorization: `Bearer ${token}` }
-        });
         setMeals(mealRes.data);
-        setGoal(goalRes.data);
+        try {
+          const goalRes = await axiosInstance.get('/api/goals', {
+            headers: { Authorization: `Bearer ${token}` }
+          });
+          setGoal(goalRes.data);
+        } catch (e) {
+          console.log('No goal set yet');
+        }
       } catch (error) {
         console.error(error);
       }
