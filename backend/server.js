@@ -12,6 +12,7 @@ app.use(express.json());
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/meals', require('./routes/mealRoutes'));
 app.use('/api/goals', require('./routes/goalRoutes'));
+app.use('/api/admin', require('./routes/adminRoutes'));
 
 if (require.main === module) {
     connectDB();
