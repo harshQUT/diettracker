@@ -1,26 +1,35 @@
-**Task Manager Application Overview:The task manager application is designed to help users efficiently manage their tasks and responsibilities by providing a user-friendly interface for creating, viewing, updating, and deleting tasks. It includes essential features such as secure user authentication, allowing individuals to sign up and log in to their accounts, as well as profile management to update personal information. With built-in validation such as input field validation and email validation, the application ensures a seamless user experience while enhancing productivity and organization in both personal and professional settings. **
+# Diet Tracker Application
 
-**This apps **contain** the following features:**
+A full-stack diet tracking application built with React, Node.js, and MongoDB.
 
-* Signup
-* Login
-* Logout
-* Update profile
-* Add tasks
-* View tasks
-* Update tasks
-* Delete tasks
+## Features
+- User authentication (Register/Login)
+- Log meals with calories, protein, carbs, fat
+- Set daily diet goals
+- Track progress against goals
+- View meal history
 
-**This **app**lication** is**almost **a** precompiled** app**. However, students will develop some features,**such as adding tasks, viewing tasks, updating tasks, and **deleting** tasks**. **Students** will interact with GitHub when they develop the features.**
+## Public URL
+http://3.27.187.226:3000
 
----
+## Test Credentials
+- Email: test1@abc.com
+- Password: 12345678
 
-**Prerequisite:** Please install the following software and create account in following web tools** **
+## Tech Stack
+- Frontend: React.js, Tailwind CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB Atlas
+- Deployment: AWS EC2
+- CI/CD: GitHub Actions
 
-* **Nodejs [**[https://nodejs.org/en](https://nodejs.org/en)]** **
-* **Git [**[https://git-scm.com/](https://git-scm.com/)]** **
-* **VS code editor** [[https://code.visualstudio.com/](https://code.visualstudio.com/)]** **
-* **MongoDB Account** [[https://account.mongodb.com/account/login](https://account.mongodb.com/account/login)]** - In tutorial, we have also showed how can you create account and database: follow step number 2.**
-* **GitHub Account** [[https://github.com/signup?source=login](https://github.com/signup?source=login)]** **
+## Setup Instructions
+1. Clone the repo: `git clone https://github.com/harshQUT/diettracker.git`
+2. Install backend: `cd backend && npm install`
+3. Install frontend: `cd frontend && npm install`
+4. Create backend/.env with MONGO_URI and JWT_SECRET
+5. Run backend: `node server.js`
+6. Run frontend: `npm start`
 
----
+## JIRA Board
+https://harshqut.atlassian.net/jira/software/projects/your-project/boards
